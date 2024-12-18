@@ -1698,6 +1698,12 @@ def int_experimental_gc_get_pointer_offset : DefaultAttrsIntrinsic<
     [llvm_i64_ty], [llvm_anyptr_ty],
     [IntrNoMem, IntrWillReturn, ReadNone<ArgIndex<0>>, NoCapture<ArgIndex<0>>]>;
 
+// NEW: HPSSA
+//===---------- intrinsic for tau ---------------=====//
+def int_tau : DefaultAttrsIntrinsic<[llvm_any_ty],
+                                    [llvm_vararg_ty],
+                                    []>;
+
 //===------------------------ Coroutine Intrinsics ---------------===//
 // These are documented in docs/Coroutines.rst
 
